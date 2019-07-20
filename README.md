@@ -20,3 +20,6 @@ Git bash commands
 git branch --- list all the brances
 //master
 git checkout Day_setup-- checkout from the master and check in to dey-setup
+
+
+### new udpate on day setup. Hina to do pull 
