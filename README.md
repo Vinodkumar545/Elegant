@@ -14,12 +14,12 @@ This is the main reason why most of the companies choose Selenium whenever they 
 
 [**Selenium IDE:**](https://docs.seleniumhq.org/selenium-ide/) Which is a firefox plug-in which deals with and playback mechanism. User can create simple scripts and export to selenium RC or Webdriver.
 
-**Selenium RC:** Is a tool which allows to automate web application using any of the programming language that supports.
+[**Selenium RC:**](https://docs.seleniumhq.org/projects/remote-control/) Is a tool which allows to automate web application using any of the programming language that supports.
 
-**Selenium Webdriver:** It makes direct calls to the browser using each browser's native support for automation.
+[**Selenium Webdriver:**](https://docs.seleniumhq.org/projects/webdriver/) It makes direct calls to the browser using each browser's native support for automation.
 Webdriver was developed to better support dynamic web pages like Ajax where elements of a page may change without the page itself being reloaded.
 
-**Selenium Grid:** Is a server that allows tests to use web browser instances running on remote machines.
+[**Selenium Grid:**](https://docs.seleniumhq.org/projects/grid/) Is a server that allows tests to use web browser instances running on remote machines.
 
 
 ## Advantages
