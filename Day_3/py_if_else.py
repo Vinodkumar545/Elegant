@@ -17,9 +17,10 @@ An "if statement" is written by using the if keyword.
 """
 
 print("Example 1: If statement:")
-
-
-
+a = 23
+b = 34
+if b > a:
+	print("b is greater than a")
 
 """
 Explaination:
@@ -35,8 +36,9 @@ Indentation
 Python relies on indentation, using whitespace, to define scope in the code. 
 Other programming languages often use curly-brackets for this purpose.
 """
-print("Example 2: Indentation")
-
+print("Example 2: Indentation (Error)")
+# if b > a:
+# print('b is greater than a')
 
 
 
@@ -47,9 +49,12 @@ The elif keyword is pythons way of saying "if the previous conditions were not t
 """
 
 print("Example 3: Elif")
-
-
-
+a = 23
+b = 23
+if b > a:
+	print("b is greater than a")
+elif a == b:
+	print("Both are are equal")
 
 
 """
@@ -66,7 +71,14 @@ The else keyword catches anything which isn't caught by the preceding conditions
 """
 
 print("Example 4: Else")
-
+a = 13
+b = 34
+if a > b:
+	print('a is greater')
+elif a == b:
+	print('both are equal')
+else:
+	print("b is greater")
 
 
 
@@ -79,7 +91,12 @@ In this example a is greater than b, so the first condition is not true, also th
 # You can also have an else without the elif:
 
 print("Example 5: Else without elif")
-
+a = 13
+b = 34
+if a > b:
+	print('a is greater')
+else:
+	print("b is greater")
 
 
 """
@@ -90,7 +107,9 @@ If you have only one statement to execute, you can put it on the same line as th
 
 # One line if statement:
 print("Example 5: Short Hand if")
-
+a = 13
+b = 34
+if b > a: print('A')
 
 """
 Short Hand If ... Else
@@ -100,12 +119,17 @@ If you have only one statement to execute, one for if, and one for else, you can
 
 # One line if else statement:
 print("Example 6: Short Hand If ... Else")
-
-
+a = 13
+b = 34
+x = a if a > b else b
+print(x)
 
 # You can also have multiple else statements on the same line:
 print("Example 7: multiple else statements on the same line:")
-
+a = 13
+b = 13
+y = a if a > b else a if a == b else b
+print(y)
 
 """
 And
@@ -113,6 +137,12 @@ And
 The and keyword is a logical operator, and is used to combine conditional statements:
 """
 print("Example 8: And")
+a = 30
+b = 20
+c = 40
+
+if (a > b) and (a < c):
+	print('a is greater')
 
 
 """
@@ -122,7 +152,8 @@ The or keyword is a logical operator, and is used to combine conditional stateme
 """
 print("Example 9: Or")
 
-
+if (a > b) or (a < c):
+	print('a is greater')
 
 
 
