@@ -12,7 +12,7 @@ This is the main reason why most of the companies choose Selenium whenever they 
 
 ## Components
 
-**Selenium IDE:** Which is a firefox plug-in which deals with and playback mechanism. User can create simple scripts and export to selenium RC or Webdriver.
+[**Selenium IDE:**](https://docs.seleniumhq.org/selenium-ide/) Which is a firefox plug-in which deals with and playback mechanism. User can create simple scripts and export to selenium RC or Webdriver.
 
 **Selenium RC:** Is a tool which allows to automate web application using any of the programming language that supports.
 
