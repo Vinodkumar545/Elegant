@@ -13,9 +13,10 @@ Creating a Function
 
 In Python a function is defined using the def keyword:
 """
-def myfunc():
+print("Creating a Function")
+def my_function():
+	print("my first function.")
 
-	print("Hello, this is my function.")
 
 
 """
@@ -23,9 +24,8 @@ Calling a Function
 
 To call a function, use the function name followed by parenthesis:
 """
-print("Calling a Function:")
 
-myfunc()
+my_function()
 
 
 
@@ -42,13 +42,12 @@ which is used inside the function to print the full name:
 """
 print("Function with Parameters")
 
-def my_function(fname):
+def funct_with_parameter(fname):
 
-	print("Hello " + fname + ", Welcome!")
+	print("My first name is " + fname)
 
 
-my_function('vinod')
-my_function("Hina")
+funct_with_parameter('john')
 
 
 
@@ -61,15 +60,14 @@ If we call the function without parameter, it uses the default value:
 """
 print("Default Parameters Value")
 
+def funct_with_default_parameters(fname, age=10):
 
-def my_function(fname, topic='Python'):
-
-	print("Hello " + fname + ", Welcome! Your topic is " + topic + ".")
+	print("My name is " + fname + ". I'm " + str(age) + ' year old.')
 
 
-my_function('vinod')
-my_function('Hina', 'java')
-
+funct_with_default_parameters('john', 24)
+funct_with_default_parameters('john', 56)
+funct_with_default_parameters('john')
 
 
 """
@@ -82,15 +80,17 @@ E.g. if you send a List as a parameter, it will still be a List when it reaches 
 """
 print("Passing a List as a Parameters:")
 
-a = ['apple', 'banna', 'orange']
+
+def funct_with_paramets_as_list(list_parameter):
+
+	for x in list_parameter:
+		print(x)
 
 
-def my_funct_with_parameter(lfruit):
+a = ['apple', 'banana', 'orange']
 
-	for f in lfruit:
-		print(f)
+funct_with_paramets_as_list(a)
 
-my_funct_with_parameter(a)
 
 """
 Return Values
@@ -99,17 +99,15 @@ To let a function return a value, use the return statement:
 """
 print("Return Values:")
 
-def my_multiplication(a):
 
-	a = a * 5
-	print(a)
+def funct_with_return(n):
 
-	return a
+	return n * 5
 
-my_multiplication(4)
-my_multiplication(10)
-my_multiplication(34123)
 
+print(funct_with_return(5))
+print(funct_with_return(10))
+print(funct_with_return(456))
 
 
 

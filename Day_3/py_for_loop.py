@@ -13,6 +13,11 @@ print("Example 1: Looping Through a List")
 
 # The for loop does not require an indexing variable to set beforehand.
 
+a = ['apple', 'banana', 'orange']
+
+for x in a:
+	print(x)
+
 
 
 """
@@ -21,6 +26,9 @@ Looping Through a String
 Even strings are iterable objects, they contain a sequence of characters:
 """
 print("Example 2: Looping Through a String")
+
+for i in 'banana':
+	print(i)
 
 
 
@@ -32,9 +40,20 @@ With the break statement we can stop the loop before it has looped through all t
 print("Example 3: The Break Statement on List")
 
 # Exit the loop when x is "banana":
+for i in a:
+	if i == 'banana':
+		break
+	print(i)
 
 
+print("Exit the loop when x is 'banana', but this time the break comes before the print:")
 # Exit the loop when x is "banana", but this time the break comes before the print:
+
+for i in a:
+	print(i)
+	if i == 'banana':
+		break
+
 
 
 """
@@ -43,6 +62,11 @@ The continue Statement
 With the continue statement we can stop the current iteration of the loop, and continue with the next:
 """
 print("Example 4: The Continue Statement")
+
+for i in a:
+	print(i)
+	if i == 'banana':
+		continue
 
 
 
@@ -63,6 +87,12 @@ print("Example 5: range() function")
 
 # Note that range(6) is not the values of 0 to 6, but the values 0 to 5.
 
+for i in range(6):
+	print(i)
+
+for i in range(len(a)):
+	print(a[i])
+
 
 
 """
@@ -71,6 +101,8 @@ however it is possible to specify the increment value by adding a third paramete
 """
 print("Example 6: range() fn with increment")
 
+for i in range(2, 30, 3):
+	print(i)
 
 
 
@@ -81,6 +113,10 @@ The else keyword in a for loop specifies a block of code to be executed when the
 """
 print("Example 7: Else in For Loop")
 
+for i in range(6):
+	print(i)
+else:
+	print('finally finished')
 
 
 """
@@ -92,10 +128,32 @@ The "inner loop" will be executed one time for each iteration of the "outer loop
 """
 
 
+a = ['apple', 'banana', 'orange']
+c = ['red', 'yellow', 'orange']
 
 
+mapping = {
+	'apple': 'red',
+	'banana': 'yellow',
+	'orange': 'orange'
+}
 
+for x in a:
+	for y in c:
+		print(x, y)
 
+		# mapping['apple'] --->> red
+		if mapping[x] == y:
+			print(x + ' is ' + y)
+			break
 
+	print('************************')
 
+"""
+# Output
 
+apple, red
+banana, yellow
+orange, orange
+
+"""
