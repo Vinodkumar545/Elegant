@@ -27,6 +27,8 @@ Here are a few examples, you will learn more about them later in this chapter:
 print('Example 2: Date Output')
 
 print(x.year)
+print(x.month)
+print(x.day)
 
 """
 Creating Date Objects
@@ -51,7 +53,22 @@ The method is called strftime(), and takes one parameter, format, to specify the
 
 """
 print('Example 3: strftime() fn')
+print(x.strftime('%a'))
 print(x.strftime('%A'))
+print(x.strftime('%w'))
+print(x.strftime('%d'))
+print(x.strftime('%b'))
+print(x.strftime('%B'))
+print(x.strftime('%y'))
+print(x.strftime('%Y'))
+print(x.strftime('%H'))
+print(x.strftime('%I'))
+print(x.strftime('%p'))
+print(x.strftime('%M'))
+print(x.strftime('%S'))
+print(x.strftime('%Z'))
+
+
 
 
 """

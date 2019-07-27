@@ -78,3 +78,15 @@ y.welcome()
 
 
 
+class ClassWithOutInitFunction:
+
+	def my_funct(self):
+
+		print('Class without __init__() function.')
+
+
+c = ClassWithOutInitFunction()
+c.my_funct()
+
+
+

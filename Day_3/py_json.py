@@ -16,9 +16,11 @@ import json
 
 x = '{"name": "john", "age": 30, "city": "new york"}'
 
+print(type(x)) # type str
+
 y = json.loads(x)
 
-print(type(y))
+print(type(y)) # type dict
 
 
 """
@@ -33,7 +35,22 @@ a = {
 	'city': 'new york'
 }
 
+print(type(a)) # type dict
+
 y = json.dumps(x)
 
-print(type(y))
+print(type(y)) # type str
+
+# read the json file
+with open('py_json.json', 'r') as rj:
+	data = json.load(rj)
+
+print(data)
+
+
+# Write into JSON file
+
+with open('py_write_json.json', 'w') as writefile:
+	json.dump(a, writefile)
+
 
