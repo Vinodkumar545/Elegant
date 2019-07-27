@@ -13,7 +13,9 @@ Creating a Function
 
 In Python a function is defined using the def keyword:
 """
+def myfunc():
 
+	print("Hello, this is my function.")
 
 
 """
@@ -22,6 +24,8 @@ Calling a Function
 To call a function, use the function name followed by parenthesis:
 """
 print("Calling a Function:")
+
+myfunc()
 
 
 
@@ -38,7 +42,13 @@ which is used inside the function to print the full name:
 """
 print("Function with Parameters")
 
+def my_function(fname):
 
+	print("Hello " + fname + ", Welcome!")
+
+
+my_function('vinod')
+my_function("Hina")
 
 
 
@@ -52,6 +62,15 @@ If we call the function without parameter, it uses the default value:
 print("Default Parameters Value")
 
 
+def my_function(fname, topic='Python'):
+
+	print("Hello " + fname + ", Welcome! Your topic is " + topic + ".")
+
+
+my_function('vinod')
+my_function('Hina', 'java')
+
+
 
 """
 Passing a List as a Parameter
@@ -63,7 +82,15 @@ E.g. if you send a List as a parameter, it will still be a List when it reaches 
 """
 print("Passing a List as a Parameters:")
 
+a = ['apple', 'banna', 'orange']
 
+
+def my_funct_with_parameter(lfruit):
+
+	for f in lfruit:
+		print(f)
+
+my_funct_with_parameter(a)
 
 """
 Return Values
@@ -71,6 +98,18 @@ Return Values
 To let a function return a value, use the return statement:
 """
 print("Return Values:")
+
+def my_multiplication(a):
+
+	a = a * 5
+	print(a)
+
+	return a
+
+my_multiplication(4)
+my_multiplication(10)
+my_multiplication(34123)
+
 
 
 

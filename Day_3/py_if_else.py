@@ -106,7 +106,6 @@ print("Example 6: Short Hand If ... Else")
 # You can also have multiple else statements on the same line:
 print("Example 7: multiple else statements on the same line:")
 
-print("A") if a > b else print("=") if a == b else print("B")
 
 """
 And

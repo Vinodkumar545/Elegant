@@ -13,8 +13,8 @@ Create a Class
 
 To create a class, use the keyword class:
 """
-class Myclass:
-	x = 5
+print("Example: Create Class")
+
 
 
 """
@@ -22,8 +22,8 @@ Create Object
 
 Now we can use the class named myClass to create objects:
 """
-p1 = Myclass()
-print(p1.x)
+print("Example: Create Object")
+
 
 
 """
@@ -38,18 +38,9 @@ All classes have a function called __init__(), which is always executed when the
 Use the __init__() function to assign values to object properties, or other operations that are necessary to do 
 when the object is being created:
 """
+print("Example: __int__() fn")
 
 
-class Person:
-
-	def __init__(self, name, age):
-		self.name = name
-		self.age = age
-
-
-p = Person("john", 28)
-print(p.name)
-print(p.age)
 
 
 # Note: The __init__() function is called automatically every time the class is being used to create a new object
@@ -63,18 +54,9 @@ Objects can also contain methods. Methods in objects are functions that belong t
 Let us create a method in the Person class:
 """
 
-class Human:
-
-	def __init__(self, name, age):
-		self.name = name
-		self.age = age
-
-	def my_funct(self):
-		print("Hello my name is " + self.name)
+print("Example: Object Methods")
 
 
-h = Human('john', 23)
-h.my_funct()
 
 ## Note: The self parameter is a reference to the current instance of the class, and is used to access variables that belong to the class.
 
@@ -86,18 +68,9 @@ The self parameter is a reference to the current instance of the class, and is u
 It does not have to be named self , you can call it whatever you like, 
 but it has to be the first parameter of any function in the class:
 """
+print("Example: Self Parameter")
 
-class Person1:
 
-	def __init__(myself, name, age):
-		myself.name = name
-		myself.age = age
-
-	def my_funct(person):
-		print("Hello, my name is " + person.name)
-
-pp = Person1('vinod', 23)
-pp.my_funct()
 
 # Modify Object Properties
 
