@@ -6,26 +6,42 @@ URL = "https://www.ultimateqa.com/simple-html-elements-for-automation/"
 
 # initialize Chrome Driver
 driver = webdriver.Chrome()
+# driver = webdriver.Firefox()
 
-# print the driver
+try:
+	# print the driver
+	print(driver)
+
+	# know the session id of the Chrome driver
+	print(driver.session_id)
+
+	# Returns the name of the underlying browser for this instance.
+	print(driver.name)
+
+	# Maximizes the current window that webdriver is using
+	driver.maximize_window()
+
+	# Loads a web page in the current browser session.
+	driver.get(URL)
+
+	# Gets the URL of the current page.
+	print(driver.current_url)
+
+	# Set the amount of time to wait for a page load to complete before throwing an error.
+
+except Exception as e:
+	print("Exception(): " + str(e))
+
+finally:
+
+	# close the web-browser
+	driver.close()
+
+	# Quit the driver
+	driver.quit()
 
 
-# know the session id of the Chrome driver
 
-
-# Returns the name of the underlying browser for this instance.
-
-
-# Maximizes the current window that webdriver is using
-
-
-# Loads a web page in the current browser session.
-
-
-# Gets the URL of the current page.
-
-
-# Set the amount of time to wait for a page load to complete before throwing an error.
 
 
 # Sets a sticky timeout to implicitly wait for an element to be found
@@ -61,8 +77,8 @@ find_element_by_css_selector
 """
 
 # By Name button1
-driver.find_element_by_name('button1').click()
-driver.back()
+# driver.find_element_by_name('button1').click()
+# driver.back()
 
 # By Xpath
 xpath_ele = "//div[contains(@class,'et_pb_row et_pb_row_3')]//div[contains(@class,'et_pb_css_mix_blend_mode_passthrough et-last-child')]//div[1]//div[1]//div[1]//div[1]//form[1]//button[1]"
