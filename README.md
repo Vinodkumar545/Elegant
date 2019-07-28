@@ -1,4 +1,3 @@
-# Elegant
 
 ## Selenium
 
@@ -8,7 +7,11 @@ Selenium is a web Automation tool which can used to perform testing ONLY on Web 
 
 There are others tool which can be used to automate both web applications and windows applications like QTP (Quick Test Professional) . As every one aware that QTP is Licensed Tool AND Selenium is Open source tool, download it configure it and enjoy.
 
-This is the main reason why most of the companies choose Selenium whenever they want to automate Web applications
+This is the main reason why most of the companies choose Selenium whenever they want to automate Web applications.
+
+Selenium Python bindings provides a simple API to write functional/acceptance tests using Selenium WebDriver. Through Selenium Python API you can access all functionalities of Selenium WebDriver in an intuitive way.
+
+Selenium Python bindings provide a convenient API to access Selenium WebDrivers like Firefox, Ie, Chrome, Remote etc.
 
 ## Components
 
@@ -40,6 +43,12 @@ Test automation has specific advantages for improving the long-term efficiency o
 Is automation always advantageous? When should one decide to automate test cases?
 
 It is not always advantageous to automate test cases. There are times when manual testing may be more appropriate. For instance, if the application’s user interface will change considerably in the near future, then any automation might need to be rewritten anyway. Also, sometimes there simply is not enough time to build test automation. For the short term, manual testing may be more effective. If an application has a very tight deadline, there is currently no test automation available, and it’s imperative that the testing get done within that time frame, then manual testing is the best solution.
+
+## Selenium with Python
+
+ReadTheDocs at [Selenium with python](https://selenium-python.readthedocs.io/index.html)
+
+
 
 
 
