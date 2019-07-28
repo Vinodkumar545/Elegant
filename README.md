@@ -49,6 +49,13 @@ It is not always advantageous to automate test cases. There are times when manua
 ReadTheDocs at [Selenium with python](https://selenium-python.readthedocs.io/index.html)
 
 
+## Customized xpath
 
+ReadTheDocs at [Customized Xpath](https://www.guru99.com/xpath-selenium.html)
+
+
+## CSS Selector
+
+ReadTheDocs at [CSS Selector](https://saucelabs.com/resources/articles/selenium-tips-css-selectors)
 
 
