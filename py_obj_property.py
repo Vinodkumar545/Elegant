@@ -1,7 +1,11 @@
 
 from selenium.webdriver.common.by import By
 import configparser
+import os
 
+
+path = os.getcwd() # C:\\Users\\Admin\\Elegant
+ini_filename = 'object_repo.ini'
 
 
 def locator(web_element_value):
@@ -9,7 +13,8 @@ def locator(web_element_value):
 	try:
 		global web_element
 		config = configparser.ConfigParser()
-		config.read('C:\\Users\\Admin\\Elegant\\object_repo.ini')
+		# config.read('C:\\Users\\Admin\\Elegant\\object_repo.ini')
+		config.read(os.path.join(path, ini_filename))
 		for section in config.sections():
 			for line in config.items(section):
 				if line[0].strip().lower() == web_element_value.strip().lower():
