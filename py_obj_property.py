@@ -35,10 +35,10 @@ def locator(web_element_value):
 		elif locator_value == 'css':
 			return [By.CSS_SELECTOR, locator_value]
 	
-	except:
+	except Exception as e:
 		print("locator() | Exception: " + str(e))
 
-print(locator("HP_txt_advcont"))
+# print(locator("HP_txt_advcont"))
 
 
 
