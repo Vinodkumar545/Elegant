@@ -38,8 +38,6 @@ def locator(web_element_value):
 	except Exception as e:
 		print("locator() | Exception: " + str(e))
 
-print(locator("HP_txt_advcont"))
-
 
 
 
