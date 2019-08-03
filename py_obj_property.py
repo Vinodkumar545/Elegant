@@ -38,12 +38,6 @@ def locator(web_element_value):
 	except Exception as e:
 		print("locator() | Exception: " + str(e))
 
-<<<<<<< HEAD
-#print(locator("HP_txt_advcont"))
-=======
-# print(locator("HP_txt_advcont"))
->>>>>>> 0a29d2c535447d4b08749efe03b2aa971c5757c3
-
 
 
 
