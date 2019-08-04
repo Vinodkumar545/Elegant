@@ -72,11 +72,24 @@ def get_title(driver):
 def click(driver, web_element):
 	try:
 		loc = OP.locator(web_element)
-		driver.find_element(loc[0], loc[1]).click()
+		click_element = driver.find_element(loc[0], loc[1])
+		click_element.click()
 		LOGGER.info("Clicked on '%s' successfully."%(web_element))
 
-	except Exception as e:
-		LOGGER.exception("click() | Exception: %s"%(e))
+	except:
+		try:
+			driver.execute_script("arguments[0].click();", click_element)
+			LOGGER.info("Clicked on '%s' successfully by execute_script."%(web_element))
+		except Exception as e:
+			LOGGER.exception("click() | Exception: %s"%(e))
+
+	# try:
+	# 	loc = OP.locator(web_element)
+	# 	driver.find_element(loc[0], loc[1]).click()
+	# 	LOGGER.info("Clicked on '%s' successfully."%(web_element))
+
+	# except Exception as e:
+	# 	LOGGER.exception("click() | Exception: %s"%(e))
 
 def send_keys(driver, web_element, text):
 	try:
