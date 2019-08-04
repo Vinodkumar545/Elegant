@@ -1,4 +1,6 @@
 
+
+from selenium.webdriver.common.touch_actions import TouchActions
 from selenium import webdriver
 import time
 
@@ -29,48 +31,106 @@ try:
 
 
 	# is displayed() - hether the element is visible to a user.
-	# //h4[contains(text(),'Advanced Controls')]
+	# print(driver.find_element_by_xpath("//h4[contains(text(),'Advanced Controls')]").is_displayed())	
 
-	locator = py_obj_property.locator("HP_txt_advcont")
-	d = driver.find_element(locator[0], locator[1]).is_displayed()
-	print(d)
+	# # locator = py_obj_property.locator("HP_txt_advcont")
+	# # d = driver.find_element(locator[0], locator[1]).is_displayed()
+	# # print(d)
 
-	# Highlight webelement
-	# "arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');"
-
-
-	# is selected() - Returns whether the element is selected.
-	# //input[@type='radio' and @value='male']
+	# # Highlight webelement
+	# highlight_ele = driver.find_element_by_xpath("//h4[contains(text(),'Click button using ClassName')]")
+	# driver.execute_script("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", highlight_ele)
 
 
-	# is enabled() - Returns whether the element is enabled.
-	# //button[@class='buttonClass']
+	# # is selected() - Returns whether the element is selected.
+	# driver.find_element_by_xpath("//input[@type='radio' and @value='male']").click()
+	# print(driver.find_element_by_xpath("//input[@type='radio' and @value='male']").is_selected())
 
-	# get_attribute() - Gets the given attribute or property of the element.
-	# //a[@data-shared='sharing-twitter-909']
+	# # is enabled() - Returns whether the element is enabled.
+	# print(driver.find_element_by_xpath("//button[@class='buttonClass']").is_enabled())
 
-	# location - The location of the element in the renderable canvas.
-	# //button[@class='buttonClass']
+	# # get_attribute() - Gets the given attribute or property of the element.
+	# print(driver.find_element_by_xpath("//a[@data-shared='sharing-twitter-909']").get_attribute('title'))
+
+	# # location - The location of the element in the renderable canvas.
+	# l = driver.find_element_by_xpath("//h4[contains(text(),'Dropdown')]").location
+	# dd_ele = driver.find_element_by_xpath("//h4[contains(text(),'Dropdown')]")
+
+	# xoffset = l['x']
+	# yoffset = l['y']
+	# print('xoffset: ' + str(xoffset))
+	# print('yoffset: ' + str(yoffset))
+
+	# try:
+	# 	# TouchActions(driver).scroll_from_element(dd_ele, xoffset, yoffset)
+	# 	driver.execute_script("arguments[0].scrollIntoView(true);", dd_ele)
+	# 	print("Scroll sucessfully.")
+	# except Exception as e:
+	# 	print("scroll exceptiion" + str(e))
+
+	# time.sleep(10)
 
 	# scroll_into_view
 	# //h4[contains(text(),'Checkboxes')]
-	# driver.execute_script("arguments[0].scrollIntoView(true);", element)
+	
 
 	## Select from drop down
 	# from selenium.webdriver.support.ui import Select
-	# //div[contains(@class,'et_pb_blurb_description')]//select
+	
+	# ele = driver.find_element_by_xpath("//div[contains(@class,'et_pb_blurb_description')]//select")
+	# driver.execute_script("arguments[0].scrollIntoView(true);", ele)
 
-	# checkout //input[contains(@value,'Bike')]
+	# time.sleep(3)
+
+	# select = Select(ele)
+	# select.select_by_index(1)
+
+	# time.sleep(5)
 
 
-	# select.select_by_index()
-	# select.select_by_value()
-	# select.select_by_visible_text()
+	# select.select_by_value('opel')
+	
+	# time.sleep(5)
 
-	# refresh page
+	# select.select_by_visible_text('Audi')
+
+	# time.sleep(5)
+
+
+	# # checkout //input[contains(@value,'Bike')]
+
+
+	# # select.select_by_index()
+	# # select.select_by_value()
+	# # select.select_by_visible_text('Opel')
+
+	# # refresh page
+	# driver.refresh()
 
 
 	# iterate through the table
+
+	no_of_rows = driver.find_elements_by_xpath("//table[@id='htmlTableId']//tr")
+	no_of_cols = driver.find_elements_by_xpath("//table[@id='htmlTableId']//tr[1]//th")
+
+	print("no_of_rows: " + str(len(no_of_rows)))
+	print('no_of_cols: ' + str(len(no_of_cols)))
+
+	for i in range(1, len(no_of_rows) + 1):
+
+		for j in range(1, len(no_of_cols) + 1):
+
+			if i == 1:
+
+				print(driver.find_element_by_xpath("//table[@id='htmlTableId']//tr[%s]//th[%s]"%(i, j)).text)
+
+
+			else:
+
+				print(driver.find_element_by_xpath("//table[@id='htmlTableId']//tr[%s]//td[%s]"%(i, j)).text)
+
+
+		print("******************************************")
 
 
 except Exception as e:
