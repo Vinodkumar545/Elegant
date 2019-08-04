@@ -70,9 +70,9 @@ try:
 	find_element_by_css_selector
 
 	"""
-	# print("find_element_by_id()")
-	# driver.find_element_by_id('idExample').click()
-	# get_text_after_click_and_back_to_home_page(driver)
+	print("find_element_by_id()")
+	driver.find_element_by_id('idExample').click()
+	get_text_after_click_and_back_to_home_page(driver)
 
 	# print("***********************")
 	# print("find_elements_by_name()")
