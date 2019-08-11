@@ -1,0 +1,10 @@
+
+.pytest_cache/
+__pycache__
+assets
+Drivers/
+venv/
+venv_name/
+logs
+
+*.jar
