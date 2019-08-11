@@ -3,6 +3,7 @@ __author__ = 'vinodkumar545'
 import platform
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.common.touch_actions import TouchActions
 
 import py_obj_property as OP
 
@@ -97,8 +98,97 @@ def send_keys(driver, web_element, text):
 		driver.find_element(loc[0], loc[1]).clear()
 		driver.find_element(loc[0], loc[1]).send_keys(text)
 		LOGGER.info("%s is successfully simuated in %s."%(text, web_element))
+
 	except Exception as e:
 		LOGGER.exception("send_keys() | Exception: %s"%(e))
+
+def element_selected(driver,web_element):
+	try:
+		loc = OP.locator(web_element)
+		selected_element = driver.find_element(loc[0],loc[1])
+		selected_element.click()
+		if selected_element.is_selected():
+			LOGGER.info("element '%s'  is selected successfully."%(web_element))
+			return True
+		else:
+			LOGGER.info("element '%s' is not selected."%(web_element))
+			return False
+
+	except Exception as e:
+		LOGGER.exception("element_selected_radio_button() | Exception: %s"%(e))
+		return False
+
+#def element_selected_check_box(driver,web_element):
+	#try:
+		#loc = OP.locator(web_element)
+		#selected_elements = driver.find_elements_by_xpath(loc[0],loc[1])
+		#if selected_elements.is_selected:
+			#LOGGER.info("element '%s'  is selected successfully."%(web_element))
+			#selected_elements.click()
+		#else:
+			#LOGGER.info("element '%s' is not selected."%(web_element))
+
+	#except Exception as e:
+		#LOGGER.exception("element_selected_check_box() | Exception: %s"%(e))
+
+def element_enabled(driver,web_element):
+	try:
+		loc = OP.locator(web_element)
+		ele_enabled = driver.find_element(loc[0],loc[1])
+		if ele_enabled.is_enabled():
+			LOGGER.info("element '%s'  is enabled."%(web_element))
+			return True
+		else:
+			LOGGER.info("element '%s'  is not enabled."%(web_element))
+			return False
+
+	except Exception as e:
+		LOGGER.exception("element_enabled() | Exception: %s"%(e))
+		return False
+
+def get_attr_prpty(driver,web_element,attribute_value):
+	try:
+		loc = OP.locator(web_element)
+		got_element = driver.find_element(loc[0],loc[1])
+		attr_value = got_element.get_attribute(attribute_value)
+		LOGGER.info("Title value of %s is %s." %(web_element,attr_value))
+		return attr_value
+
+	except Exception as e:
+		LOGGER.exception("get_attr_prpty() | Exception: %s"%(e)) 
+
+
+def element_selected_drop_down(driver, web_element):
+	try:
+		loc = OP.locator(web_element)
+		ele = driver.find_element(loc[0],loc[1])
+		LOGGER.info("%s"%(ele))
+		driver.execute_script("arguments[1].scrollIntoView(true);", ele)
+		time.sleep(3)
+		select = Select(ele)
+		select.select_by_index(1)
+		LOGGER.info("selected value is '%s' " %(web_element))
+		time.sleep(5)
+		select.select_by_value('ope1')
+		LOGGER.info("selected value is '%s' " %(web_element))
+		time.sleep(5)
+		select.select_by_visible_text('Audi')
+		LOGGER.info("selected value is '%s' " %(web_element))
+		time.sleep(5)
+
+	except Exception as e:
+		LOGGER.exception("element_selected_drop_down() | Exception: %s"%(e)) 
+
+
+
+
+
+
+
+
+
+
+
 
 
 def back(driver):
