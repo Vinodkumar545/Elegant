@@ -33,6 +33,11 @@ test_base.get_title(driver)
 
 #test_base.get_attr_prpty(driver,"IS_btn_twitter")
 
-test_base.element_selected_drop_down(driver,"IS_drpdwn_select")
+# test_base.element_selected_drop_down(driver,"IS_drpdwn_select","by_index",1)
+
+# test_base.element_selected_drop_down(driver,"IS_drpdwn_select","by_value","ope1")
+
+# test_base.element_selected_drop_down(driver,"IS_drpdwn_select","by_visible_text","Audi")
+
 
 

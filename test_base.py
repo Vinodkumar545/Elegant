@@ -4,11 +4,13 @@ import platform
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.common.touch_actions import TouchActions
+from selenium.webdriver.support.ui import Select
 
 import py_obj_property as OP
 
 import logging_conf
 import logging
+import time
 
 LOGGER = logging.getLogger('logs')
 
@@ -118,18 +120,18 @@ def element_selected(driver,web_element):
 		LOGGER.exception("element_selected_radio_button() | Exception: %s"%(e))
 		return False
 
-#def element_selected_check_box(driver,web_element):
-	#try:
-		#loc = OP.locator(web_element)
-		#selected_elements = driver.find_elements_by_xpath(loc[0],loc[1])
-		#if selected_elements.is_selected:
-			#LOGGER.info("element '%s'  is selected successfully."%(web_element))
-			#selected_elements.click()
-		#else:
-			#LOGGER.info("element '%s' is not selected."%(web_element))
+# def element_selected_check_box(driver,web_element):
+# 	try:
+# 		loc = OP.locator(web_element)
+# 		selected_elements = driver.find_element(loc[0],loc[1])
+		
+# 			LOGGER.info("element '%s'  is selected successfully."%(web_element))
+# 			selected_elements.click()
+# 		else:
+# 			LOGGER.info("element '%s' is not selected."%(web_element))
 
-	#except Exception as e:
-		#LOGGER.exception("element_selected_check_box() | Exception: %s"%(e))
+# 	except Exception as e:
+# 		LOGGER.exception("element_selected_check_box() | Exception: %s"%(e))
 
 def element_enabled(driver,web_element):
 	try:
@@ -158,23 +160,42 @@ def get_attr_prpty(driver,web_element,attribute_value):
 		LOGGER.exception("get_attr_prpty() | Exception: %s"%(e)) 
 
 
-def element_selected_drop_down(driver, web_element):
+def element_selected_drop_down(driver, web_element,select_options,select_value): 
+	"""
+	Description: function to select the drop down values
+
+	Args: driver-
+		webelement-
+		select Options: 
+			by_index - to perform select_by_index function
+			by_value - to perform select_by_value function
+			by_visible_text - to perform select_by_visible_text function
+
+		select Values:
+			Values are sent as an arguments to all the three select function
+	"""
 	try:
 		loc = OP.locator(web_element)
 		ele = driver.find_element(loc[0],loc[1])
 		LOGGER.info("%s"%(ele))
-		driver.execute_script("arguments[1].scrollIntoView(true);", ele)
+		driver.execute_script("arguments[0].scrollIntoView(true);", ele)
 		time.sleep(3)
 		select = Select(ele)
-		select.select_by_index(1)
-		LOGGER.info("selected value is '%s' " %(web_element))
-		time.sleep(5)
-		select.select_by_value('ope1')
-		LOGGER.info("selected value is '%s' " %(web_element))
-		time.sleep(5)
-		select.select_by_visible_text('Audi')
-		LOGGER.info("selected value is '%s' " %(web_element))
-		time.sleep(5)
+
+		if select_options == "by_index":
+			select.select_by_index(select_value)
+			LOGGER.info("selected value is '%s' " %(web_element))
+			time.sleep(5)
+
+		if select_options == "by_value":
+			select.select_by_value(select_value)
+			LOGGER.info("selected value is '%s' " %(web_element))
+			time.sleep(5)
+
+		if select_options == "by_visible_text":
+			select.select_by_visible_text(select_value)
+			LOGGER.info("selected value is '%s' " %(web_element))
+			time.sleep(5)
 
 	except Exception as e:
 		LOGGER.exception("element_selected_drop_down() | Exception: %s"%(e)) 
