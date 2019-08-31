@@ -24,26 +24,26 @@ def get_parameters(tc_id):
 
 # get_parameters("tc_05")	
 
-# def test_01():
-# 	assert True
+def test_01():
+	assert True
 
-# def test_02():
-# 	assert False
+def test_02():
+	assert False
 
-# def test_03():
-# 	pytest.skip("Skip this test_03")
+def test_03():
+	pytest.skip("Skip this test_03")
 
-# def test_04():
-# 	pytest.xfail("This test_04 was expected to fail.")
+def test_04():
+	pytest.xfail("This test_04 was expected to fail.")
 
-# @pytest.mark.parametrize('a', [2])
-# def test_01_parameter(a):
+@pytest.mark.parametrize('a', [2])
+def test_01_parameter(a):
 
-# 	if a > 5:
-# 		assert True
+	if a > 5:
+		assert True
 
-# 	else:
-# 		assert False
+	else:
+		assert False
 
 # @pytest.mark.parametrize('a, b', [
 # 	(2, 4)
