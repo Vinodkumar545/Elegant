@@ -235,24 +235,27 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 11-Aug-2019 at 11:58:02 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v1.22.0</p>
+    <p>Report generated on 01-Sep-2019 at 14:56:28 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v1.22.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
+        <td>JAVA_HOME</td>
+        <td>C:\Program Files\Java\jdk1.8.0_172</td></tr>
+      <tr>
         <td>Packages</td>
-        <td>{&apos;pytest&apos;: &apos;5.0.1&apos;, &apos;py&apos;: &apos;1.8.0&apos;, &apos;pluggy&apos;: &apos;0.12.0&apos;}</td></tr>
+        <td>{&apos;pytest&apos;: &apos;5.1.2&apos;, &apos;py&apos;: &apos;1.8.0&apos;, &apos;pluggy&apos;: &apos;0.12.0&apos;}</td></tr>
       <tr>
         <td>Platform</td>
-        <td>Windows-10-10.0.10240-SP0</td></tr>
+        <td>Windows-7-6.1.7601-SP1</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{&apos;html&apos;: &apos;1.22.0&apos;, &apos;metadata&apos;: &apos;1.8.0&apos;}</td></tr>
+        <td>{&apos;forked&apos;: &apos;1.0.2&apos;, &apos;html&apos;: &apos;1.22.0&apos;, &apos;metadata&apos;: &apos;1.8.0&apos;, &apos;xdist&apos;: &apos;1.29.0&apos;}</td></tr>
       <tr>
         <td>Python</td>
-        <td>3.7.0</td></tr></table>
+        <td>3.6.0</td></tr></table>
     <h2>Summary</h2>
-    <p>2 tests ran in 16.17 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>1 tests ran in 40.04 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -263,23 +266,12 @@ function filter_table(elem) {
           <th>Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">test_fixture.py::test_02_selenium</td>
-          <td class="col-duration">1.56</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">driver = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;09ceb62bf57cec2240169ebc43e8cd05&quot;)&gt;<br/><br/>    def test_02_selenium(driver):<br/>    <br/>    	# driver = webdriver.Chrome()<br/>    <br/>    	print(driver)<br/>    <br/>    	driver.get(&#x27;https://www.w3schools.com/&#x27;)<br/>    <br/>&gt;   	assert driver.title == &#x27;W3Schools Online Web Tutorial&#x27;<br/><span class="error">E    AssertionError: assert &#x27;W3Schools On...Web Tutorials&#x27; == &#x27;W3Schools Online Web Tutorial&#x27;</span><br/><span class="error">E      - W3Schools Online Web Tutorials</span><br/><span class="error">E      ?                              -</span><br/><span class="error">E      + W3Schools Online Web Tutorial</span><br/><br/>test_fixture.py:41: AssertionError<br/>----------------------------- Captured stdout call -----------------------------<br/>&lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;09ceb62bf57cec2240169ebc43e8cd05&quot;)&gt;
-<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_fixture.py::test_01_selenium</td>
-          <td class="col-duration">1.23</td>
+          <td class="col-name">test_execute.py::test_to_verify_login_to_demo99</td>
+          <td class="col-duration">28.91</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>&lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;17e198f22eeb39138dd27d4cac833eb2&quot;)&gt;
-<br/></div></td></tr></tbody></table></body></html>
+            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>

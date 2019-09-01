@@ -1,2 +1,0 @@
-# Elegant
-Elegant first session

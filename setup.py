@@ -1,12 +1,13 @@
 
 from setuptools import setup
+from Utilities import settings
 
 setup(
-	name = "test application name",
-	version = "v 0.1",
-	description = "Learning about tox",
-	author = "Vinodkumar",
-	author_email = "vv@gmail.com",
-	url = "www.abc.com",
-# 	packages =['POM', 'Utilities'],
+	name = settings.APP_NAME,
+	version = settings.APP_VERSION,
+	description = settings.APP_DESCP,
+	author = settings.APP_AUTHOR,
+	author_email = settings.APP_EMAIL,
+	url = settings.APP_URL,
+	packages =['POM', 'Utilities'],
 )
