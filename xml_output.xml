@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="Sweet-Home-PC" name="pytest" skipped="0" tests="1" time="40.031" timestamp="2019-09-01T14:55:48.882404"><testcase classname="test_execute" file="test_execute.py" line="4" name="test_to_verify_login_to_demo99" time="39.843"></testcase></testsuite></testsuites>
