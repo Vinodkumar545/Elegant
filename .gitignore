@@ -6,5 +6,12 @@ Drivers/
 venv/
 venv_name/
 logs
+test_application_name.egg-info/
+
+.tox/
 
 *.jar
+
+*.xml
+
+*.html

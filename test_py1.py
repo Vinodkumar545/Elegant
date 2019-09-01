@@ -37,7 +37,7 @@ def test_04():
 	pytest.xfail("This test_04 was expected to fail.")
 
 @pytest.mark.parametrize('a', [2])
-def test_01_parameter(a):
+def test_05_parameter(a):
 
 	if a > 5:
 		assert True
@@ -70,7 +70,7 @@ def test_01_parameter(a):
 # 		assert False
 
 
-@pytest.mark.parametrize('a, b', get_parameters('tc_05'))
+@pytest.mark.parametrize('a, b', get_parameters('tc_01'))
 def test_05_parameter(a, b):
 
 	if a + b > 5:
