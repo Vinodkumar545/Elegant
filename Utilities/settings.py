@@ -3,12 +3,15 @@ from logging.config import dictConfig
 import logging
 import os
 
+#######################Application related details ##################################
 
 APP_URL = "http://demo.guru99.com/V4/"
 
 USER_NAME = "mngr220752"
 
 PWD = "syzyrUz"
+
+##############Test Framework details########################################
 
 APP_NAME = "ICON"
 
@@ -24,11 +27,11 @@ LOG_NAME = "testlogs.log"
 
 NODE_URL = "http://127.0.0.1:4444/wd/hub"
 
+################### Project Directory path#######################################
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  #project dir
 
 OBJECT_REPO = os.path.join(BASE_DIR, "Utilities", "object_repo.ini")
-
-
 
 ###################Email Configuration#####################################
 
@@ -40,10 +43,9 @@ SEND_FROM = "elegant@gmail.com"
 
 MAIL_TO = ['hinak406@gmail.com','vinodkumar.kouthal@gmail.com']
 
-SMTP_USERNAME = "hinak406@gmail.com"
+SMTP_USERNAME = "mention_emmail_Id_here"
 
-SMTP_PASSWORD = "Hin@1994"
-
+SMTP_PASSWORD = "Mention_password_here"
 
 ###################Logging Configuration#######################################
 
