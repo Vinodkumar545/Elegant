@@ -14,11 +14,11 @@ Checkout to the branch.
 
 Create a Virtual Environment, activate it and install the libraries from requirement file 
 
-`
+```
 $ virtualenv -p python3.6 venv
 $ venv\Scripts\activate.bat
 $ pip install -r requirements.txt
-`
+```
 
 # Host Selenium Standalone Server
 
