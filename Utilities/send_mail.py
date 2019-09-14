@@ -7,99 +7,163 @@ from email.mime.base import MIMEBase
 from xml.dom import minidom
 import smtplib
 from Utilities import settings
+import datetime
+import os
+import email
 
-def trigger_email():
-	subject = 'test email worked'
-	body = "Hey, what's up? This is test email.\n\n- You"
+def py_mail(subject,email_body):
+    # email_text = """\
+    # From: %s
+    # To: %s
+    # Subject: %s
 
-	email_text = """\
-	From: %s
-	To: %s
-	Subject: %s
+    # %s
+    # """ % (sent_from, ", ".join(to), subject, body)
 
-	%s
-	""" % (sent_from, ", ".join(to), subject, body)
+    try:
+        MESSAGE = MIMEMultipart("alternative")
+        MESSAGE["subject"] = subject
+        MESSAGE["To"] = ", ".join(settings.MAIL_TO)
+        MESSAGE["From"] = settings.SEND_FROM
+        HTML_BODY = MIMEText(email_body,"html")
+        MESSAGE.attach(HTML_BODY)
 
-	try:
-	    server = smtplib.SMTP(settings.SMTP_HOST, settings.SMTP_PORT)
-	    server.ehlo()
-	    server.starttls()
-	    server.login(settings.SMTP_USERNAME, settings.SMTP_PASSWORD)
-	    server.sendmail(settings.SEND_FROM, settings.MAIL_TO, email_text)
-	    server.close()
+        server = smtplib.SMTP(settings.SMTP_HOST, settings.SMTP_PORT)
+        server.ehlo()
+        server.starttls()
+        server.login(settings.SMTP_USERNAME, settings.SMTP_PASSWORD)
+        server.sendmail(settings.SEND_FROM, (settings.MAIL_TO), MESSAGE.as_string(email_body))
+        server.close()
 
-    # # add attachment to the body
-# # file_attachment = open(file_path, 'rb')
-# # part = MIMEBase('application', 'octet-stream')
-# # part.set_payload((file_attachment).read())
-# # email.encoders.encode_base64(part)
-# # part.add_header('Content-Disposition', "attachment; filename= %s" % new_filename)
-# # MESSAGE.attach(part)
-except Exception as e:
-    print('Something went wrong...'%(e))
+        # add attachment to the body
+        file_path = os.path.join(settings.BASE_DIR,"report.html")
+        file_attachment = open(file_path, 'rb')
+        part = MIMEBase('application', 'octet-stream')
+        part.set_payload((file_attachment).read())
+        email.encoders.encode_base64(part)
+        part.add_header('Content-Disposition', "attachment; filename= report")
+        MESSAGE.attach(part)
+        print("Email is triigered successfully")
+    except Exception as e:
+        print('Something went wrong...'%(e))
 
 def get_xml_info(return_info):
 
-	mydoc = minidom.parse('xml_output.xml')
-	items = mydoc.getElementsByTagName('testsuite')
+    mydoc = minidom.parse('xml_output.xml')
+    items = mydoc.getElementsByTagName('testsuite')
 
-	errors = int(items[0].attributes['errors'].value)
-	failures = int(items[0].attributes['failures'].value)
-	skips = int(items[0].attributes['skipped'].value)
-	tests = int(items[0].attributes['tests'].value)
-	time_taken = items[0].attributes['time'].value
+    errors = int(items[0].attributes['errors'].value)
+    failures = int(items[0].attributes['failures'].value)
+    skips = int(items[0].attributes['skipped'].value)
+    tests = int(items[0].attributes['tests'].value)
+    time_taken = items[0].attributes['time'].value
 
-	if return_info == 'tot_testcases':
-		return tests
+    if return_info == 'tot_testcases':
+        return tests
 
 
-	if return_info == 'pass_result':
-		if failures != 0 and errors != 0 and skips != 0:
-			return tests
-		else:
-			pass_test = tests - failures - errors - skips
-			return pass_test
+    if return_info == 'pass_result':
+        if failures != 0 and errors != 0 and skips != 0:
+            return tests
+        else:
+            pass_test = tests - failures - errors - skips
+            return pass_test
 
-	if return_info == 'fail_result':
-		return failures
+    if return_info == 'fail_result':
+        return failures
 
-	if return_info == 'error_result':
-		return errors
+    if return_info == 'skip_result':
+        return skips
 
-	if return_info == 'time_taken':
-		return time_taken
+    if return_info == 'error_result':
+        return errors
 
-	if return_info == 'status':
-		if errors == 0 and failures == 0:
-			return "PASS"
+    if return_info == 'time_taken':
+        return time_taken
 
-		if failures != 0:
-			return "FAIL"
+    if return_info == 'status':
+        if errors == 0 and failures == 0:
+            return "PASS"
 
-		if errors != 0:
-			return "ERROR"
+        if failures != 0:
+            return "FAIL"
 
-		if skips != 0:
-			return "SKIPS"
+        if errors != 0:
+            return "ERROR"
 
-		else:
-			return "NA"
+        if skips != 0:
+            return "SKIPS"
 
-	if return_info == 'subject':
-		if errors == 0 and failures == 0:
-			return "PASS"
+        else:
+            return "NA"
 
-		if failures != 0:
-			return "FAIL - " + str(failures) + " tests"
+    if return_info == 'subject':
+        if errors == 0 and failures == 0:
+            return "PASS"
 
-		if errors != 0:
-			return "ERROR"
+        if failures != 0:
+            return "FAIL - " + str(failures) + " tests"
 
-		if skips != 0:
-			return "SKIPS"
+        if errors != 0:
+            return "ERROR"
 
-		else:
-			return "NA"
+        if skips != 0:
+            return "SKIPS"
+
+        else:
+            return "NA"
+
+def trigger_mail():
+    
+    current_time = datetime.datetime.now().strftime("%d %b %Y %H:%M")
+    subject = '%s | Test Automation Report | %s' %(settings.APP_NAME, current_time)
+
+    email_body = """
+    <body>
+        <p>Hello Team,</p>
+        <p>Automation test scripts for <b>{APP_NAME}</b> has successfully executed</p> 
+
+        <table border="1">
+            <tr>
+                <td><b>No of test</b></td>
+                <td>{tot_testcases}</td>
+            </tr>
+            <tr>
+                <td><b>Passed test cases</b></td>
+                <td>{pass_result}</td>
+            </tr>
+            <tr>
+                <td><b>Failed test cases</b></td>
+                <td>{fail_result}</td>
+            </tr>
+            <tr>
+                <td><b>Skipped test cases</b></td>
+                <td>{skip_result}</td>
+            </tr>
+            <tr>
+                <td><b>Erros</b></td>
+                <td>{error_result}</td>
+            </tr>
+            <tr>
+                <td><b>Time taken</b></td>
+                <td>{time_taken}</td>
+            </tr>
+        </table>
+        <p>Regards, <br>
+        Automation team </p>
+        <i>*This is autogenerated email.. dont reply</i>
+    </body>""".format(APP_NAME = settings.APP_NAME, 
+                tot_testcases = get_xml_info("tot_testcases"),
+                pass_result = get_xml_info("pass_result"),
+                fail_result =get_xml_info("fail_result"),
+                skip_result = get_xml_info("skip_result"),
+                error_result = get_xml_info("error_result"),
+                time_taken = get_xml_info("time_taken") )
+
+
+    py_mail(subject,email_body)
+
+
 
 
 

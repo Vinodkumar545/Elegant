@@ -10,7 +10,7 @@ USER_NAME = "mngr220752"
 
 PWD = "syzyrUz"
 
-APP_NAME = "TESTING"
+APP_NAME = "ICON"
 
 APP_VERSION = "7"
 
@@ -24,7 +24,7 @@ LOG_NAME = "testlogs.log"
 
 NODE_URL = "http://127.0.0.1:4444/wd/hub"
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  #project dir
 
 OBJECT_REPO = os.path.join(BASE_DIR, "Utilities", "object_repo.ini")
 
@@ -36,13 +36,13 @@ SMTP_HOST = "smtp.gmail.com"
 
 SMTP_PORT = 587
 
-SEND_FROM = ""
+SEND_FROM = "elegant@gmail.com"
 
-MAIL_TO = ['hinak406@gmail.com']
+MAIL_TO = ['hinak406@gmail.com','vinodkumar.kouthal@gmail.com']
 
-SMTP_USERNAME = "xxx@gmail.com"
+SMTP_USERNAME = "hinak406@gmail.com"
 
-SMTP_PASSWORD = "gmailpasswordhere"
+SMTP_PASSWORD = "Hin@1994"
 
 
 ###################Logging Configuration#######################################
