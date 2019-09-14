@@ -45,3 +45,6 @@ For Authenticating with Gmail refer this Article [stackabuse](`https://stackabus
 1. Provide the list of recepients in **MAIL_TO**
 2. Provide your personal gmail id  in **SMTP_USERNAME**
 3. Provide your gmail password in **SMTP_PASSWORD**
+
+# Run the test suite
+`$ tox`
