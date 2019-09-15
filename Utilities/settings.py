@@ -5,7 +5,7 @@ import os
 
 #######################Application related details ##################################
 
-APP_URL = "http://demo.guru99.com/V4/"
+APP_URL = "http://automationpractice.com/index.php"
 
 USER_NAME = "mngr220752"
 
@@ -33,19 +33,21 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  #project
 
 OBJECT_REPO = os.path.join(BASE_DIR, "Utilities", "object_repo.ini")
 
+SCREENSHOT = os.path.join(BASE_DIR, "screenshots")
+
 ###################Email Configuration#####################################
 
 SMTP_HOST = "smtp.gmail.com"
 
 SMTP_PORT = 587
 
-SEND_FROM = "elegant@gmail.com"
+SEND_FROM = "automationreports@gmail.com"
 
 MAIL_TO = ['hinak406@gmail.com','vinodkumar.kouthal@gmail.com']
 
-SMTP_USERNAME = "mention_emmail_Id_here"
+SMTP_USERNAME = "mention_gmail_Id_here"
 
-SMTP_PASSWORD = "Mention_password_here"
+SMTP_PASSWORD = "Mention_gmail_password_here"
 
 ###################Logging Configuration#######################################
 

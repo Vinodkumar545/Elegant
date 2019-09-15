@@ -1,10 +1,42 @@
 import pytest
 from POM import login_page
+from Utilities import xlsx,settings
+import logging
 
 
-def test_to_verify_login_to_demo99(driver):
-	assert login_page.login_demo99(driver) == True
+LOGGER = logging.getLogger(settings.LOG_NAME)
 
-	
+def get_test_data():
+	col_tc_id = 1
+	col_tc_desc = 2
+	col_tc_user_name = 3
+	col_tc_pwd = 4
+	workbook = xlsx.load_excel("testdata.xlsx")
+	sheet_name = "Scenarios"
+	row_length = xlsx.get_row_length(workbook,sheet_name)
 
-		
+	testdata_info = []
+
+	for row in range(2,row_length+1):
+		tc_id = xlsx.read_cell(workbook,sheet_name,row,col_tc_id)
+		tc_desc = xlsx.read_cell(workbook,sheet_name,row,col_tc_desc)
+		tc_user_name = xlsx.read_cell(workbook,sheet_name,row,col_tc_user_name)
+		tc_pwd = xlsx.read_cell(workbook,sheet_name,row,col_tc_pwd)
+
+		testdata_info.append({
+			"tc_id" : tc_id,
+			"tc_desc" : tc_desc,
+			"tc_user_name" : tc_user_name,
+			"tc_pwd" : tc_pwd
+			#category
+			})
+	return testdata_info
+
+#print(get_test_data())
+
+@pytest.mark.parametrize("testdata",get_test_data())
+def test_login_to_automation_practice(driver,testdata):
+	LOGGER.info("%s"%(testdata))
+	assert login_page.login_your_logo(driver,testdata['tc_user_name'],testdata['tc_pwd']) is True
+    #write another function to select cateogory to accpt arguments
+

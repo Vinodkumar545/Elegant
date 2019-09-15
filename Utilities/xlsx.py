@@ -11,7 +11,7 @@ from Utilities import settings
 
 LOGGER = logging.getLogger(settings.LOG_NAME)
 
-def active_excel(file_path):
+def load_excel(file_path):
 	"""
 	To activate the workbook and as a argument send excel file path
 	"""

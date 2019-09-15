@@ -72,6 +72,7 @@ def get_text(driver, web_element):
 	try:
 		loc=OP.locator(web_element)
 		text = driver.find_element(loc[0], loc[1]).text
+		LOGGER.info("Text of the webelement is '%s'."%(text))
 		return text
 	
 	except Exception as e:

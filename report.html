@@ -235,7 +235,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 01-Sep-2019 at 14:56:28 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v1.22.0</p>
+    <p>Report generated on 15-Sep-2019 at 14:25:49 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v1.22.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -254,8 +254,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.6.0</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 40.04 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>2 tests ran in 116.79 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -269,9 +269,60 @@ function filter_table(elem) {
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_execute.py::test_to_verify_login_to_demo99</td>
-          <td class="col-duration">28.91</td>
+          <td class="col-name">test_execute.py::test_login_to_automation_practice[testdata0]</td>
+          <td class="col-duration">50.88</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>
+            <div><div><img src="d:\pythoncourse\elegant\screenshots\screenshot_7362.png" alt="screenshot" style="width:600px;height:228px;" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log">---------------------------- Captured stderr setup -----------------------------<br/>2019-09-15 14:24:00,637 - testlogs.log - INFO - chrome Driver has been initiated successfully
+2019-09-15 14:24:02,222 - testlogs.log - INFO - Browser was maximized successfully.
+2019-09-15 14:24:02,743 - testlogs.log - INFO - Driver to perform implicitly_wait of &#x27;10&#x27; seconds.
+<br/>------------------------------ Captured log setup ------------------------------<br/>[32mINFO    [0m testlogs.log:test_base.py:45 chrome Driver has been initiated successfully
+[32mINFO    [0m testlogs.log:test_base.py:52 Browser was maximized successfully.
+[32mINFO    [0m testlogs.log:test_base.py:60 Driver to perform implicitly_wait of &#x27;10&#x27; seconds.<br/>----------------------------- Captured stderr call -----------------------------<br/>2019-09-15 14:24:02,750 - testlogs.log - INFO - {&#x27;tc_id&#x27;: &#x27;TC01&#x27;, &#x27;tc_desc&#x27;: &#x27;Login&#x27;, &#x27;tc_user_name&#x27;: &#x27;hinak406@gmail.com&#x27;, &#x27;tc_pwd&#x27;: &#x27;Hin@1994&#x27;}
+2019-09-15 14:24:27,826 - testlogs.log - INFO - Driver open the &#x27;http://automationpractice.com/index.php&#x27; successfully
+2019-09-15 14:24:27,887 - testlogs.log - INFO - Driver has set the page load timeout of &#x27;60&#x27; seconds.
+2019-09-15 14:24:34,877 - testlogs.log - INFO - Clicked on &#x27;LP_link_signin&#x27; successfully.
+2019-09-15 14:24:38,139 - testlogs.log - INFO - hinak406@gmail.com is successfully simuated in LP_txtbx_email_id.
+2019-09-15 14:24:39,142 - testlogs.log - INFO - Hin@1994 is successfully simuated in LP_txtbx_pwd.
+2019-09-15 14:24:43,448 - testlogs.log - INFO - Clicked on &#x27;LP_btn_signin&#x27; successfully.
+2019-09-15 14:24:53,629 - testlogs.log - INFO - Text of the webelement is &#x27;MY ACCOUNT&#x27;.
+<br/>------------------------------ Captured log call -------------------------------<br/>[32mINFO    [0m testlogs.log:test_execute.py:38 {&#x27;tc_id&#x27;: &#x27;TC01&#x27;, &#x27;tc_desc&#x27;: &#x27;Login&#x27;, &#x27;tc_user_name&#x27;: &#x27;hinak406@gmail.com&#x27;, &#x27;tc_pwd&#x27;: &#x27;Hin@1994&#x27;}
+[32mINFO    [0m testlogs.log:test_base.py:56 Driver open the &#x27;http://automationpractice.com/index.php&#x27; successfully
+[32mINFO    [0m testlogs.log:test_base.py:64 Driver has set the page load timeout of &#x27;60&#x27; seconds.
+[32mINFO    [0m testlogs.log:test_base.py:86 Clicked on &#x27;LP_link_signin&#x27; successfully.
+[32mINFO    [0m testlogs.log:test_base.py:108 hinak406@gmail.com is successfully simuated in LP_txtbx_email_id.
+[32mINFO    [0m testlogs.log:test_base.py:108 Hin@1994 is successfully simuated in LP_txtbx_pwd.
+[32mINFO    [0m testlogs.log:test_base.py:86 Clicked on &#x27;LP_btn_signin&#x27; successfully.
+[32mINFO    [0m testlogs.log:test_base.py:75 Text of the webelement is &#x27;MY ACCOUNT&#x27;.<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_execute.py::test_login_to_automation_practice[testdata1]</td>
+          <td class="col-duration">39.82</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div><div><img src="d:\pythoncourse\elegant\screenshots\screenshot_6532.png" alt="screenshot" style="width:600px;height:228px;" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log">---------------------------- Captured stderr setup -----------------------------<br/>2019-09-15 14:25:03,746 - testlogs.log - INFO - chrome Driver has been initiated successfully
+2019-09-15 14:25:05,382 - testlogs.log - INFO - Browser was maximized successfully.
+2019-09-15 14:25:05,446 - testlogs.log - INFO - Driver to perform implicitly_wait of &#x27;10&#x27; seconds.
+<br/>------------------------------ Captured log setup ------------------------------<br/>[32mINFO    [0m testlogs.log:test_base.py:45 chrome Driver has been initiated successfully
+[32mINFO    [0m testlogs.log:test_base.py:52 Browser was maximized successfully.
+[32mINFO    [0m testlogs.log:test_base.py:60 Driver to perform implicitly_wait of &#x27;10&#x27; seconds.<br/>----------------------------- Captured stderr call -----------------------------<br/>2019-09-15 14:25:05,454 - testlogs.log - INFO - {&#x27;tc_id&#x27;: &#x27;TC02&#x27;, &#x27;tc_desc&#x27;: &#x27;Login&#x27;, &#x27;tc_user_name&#x27;: &#x27;hinak406@gmail.com&#x27;, &#x27;tc_pwd&#x27;: &#x27;Hin@1994&#x27;}
+2019-09-15 14:25:19,884 - testlogs.log - INFO - Driver open the &#x27;http://automationpractice.com/index.php&#x27; successfully
+2019-09-15 14:25:19,984 - testlogs.log - INFO - Driver has set the page load timeout of &#x27;60&#x27; seconds.
+2019-09-15 14:25:25,475 - testlogs.log - INFO - Clicked on &#x27;LP_link_signin&#x27; successfully.
+2019-09-15 14:25:27,943 - testlogs.log - INFO - hinak406@gmail.com is successfully simuated in LP_txtbx_email_id.
+2019-09-15 14:25:30,279 - testlogs.log - INFO - Hin@1994 is successfully simuated in LP_txtbx_pwd.
+2019-09-15 14:25:34,951 - testlogs.log - INFO - Clicked on &#x27;LP_btn_signin&#x27; successfully.
+2019-09-15 14:25:45,145 - testlogs.log - INFO - Text of the webelement is &#x27;MY ACCOUNT&#x27;.
+<br/>------------------------------ Captured log call -------------------------------<br/>[32mINFO    [0m testlogs.log:test_execute.py:38 {&#x27;tc_id&#x27;: &#x27;TC02&#x27;, &#x27;tc_desc&#x27;: &#x27;Login&#x27;, &#x27;tc_user_name&#x27;: &#x27;hinak406@gmail.com&#x27;, &#x27;tc_pwd&#x27;: &#x27;Hin@1994&#x27;}
+[32mINFO    [0m testlogs.log:test_base.py:56 Driver open the &#x27;http://automationpractice.com/index.php&#x27; successfully
+[32mINFO    [0m testlogs.log:test_base.py:64 Driver has set the page load timeout of &#x27;60&#x27; seconds.
+[32mINFO    [0m testlogs.log:test_base.py:86 Clicked on &#x27;LP_link_signin&#x27; successfully.
+[32mINFO    [0m testlogs.log:test_base.py:108 hinak406@gmail.com is successfully simuated in LP_txtbx_email_id.
+[32mINFO    [0m testlogs.log:test_base.py:108 Hin@1994 is successfully simuated in LP_txtbx_pwd.
+[32mINFO    [0m testlogs.log:test_base.py:86 Clicked on &#x27;LP_btn_signin&#x27; successfully.
+[32mINFO    [0m testlogs.log:test_base.py:75 Text of the webelement is &#x27;MY ACCOUNT&#x27;.<br/></div></td></tr></tbody></table></body></html>
