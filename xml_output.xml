@@ -1,23 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="Sweet-Home-PC" name="pytest" skipped="0" tests="2" time="116.786" timestamp="2019-09-15T14:23:52.343007"><testcase classname="test_execute" file="test_execute.py" line="35" name="test_login_to_automation_practice[testdata0]" time="61.969"><system-err>2019-09-15 14:24:00,637 - testlogs.log - INFO - chrome Driver has been initiated successfully
-2019-09-15 14:24:02,222 - testlogs.log - INFO - Browser was maximized successfully.
-2019-09-15 14:24:02,743 - testlogs.log - INFO - Driver to perform implicitly_wait of &apos;10&apos; seconds.
-2019-09-15 14:24:02,750 - testlogs.log - INFO - {&apos;tc_id&apos;: &apos;TC01&apos;, &apos;tc_desc&apos;: &apos;Login&apos;, &apos;tc_user_name&apos;: &apos;hinak406@gmail.com&apos;, &apos;tc_pwd&apos;: &apos;Hin@1994&apos;}
-2019-09-15 14:24:27,826 - testlogs.log - INFO - Driver open the &apos;http://automationpractice.com/index.php&apos; successfully
-2019-09-15 14:24:27,887 - testlogs.log - INFO - Driver has set the page load timeout of &apos;60&apos; seconds.
-2019-09-15 14:24:34,877 - testlogs.log - INFO - Clicked on &apos;LP_link_signin&apos; successfully.
-2019-09-15 14:24:38,139 - testlogs.log - INFO - hinak406@gmail.com is successfully simuated in LP_txtbx_email_id.
-2019-09-15 14:24:39,142 - testlogs.log - INFO - Hin@1994 is successfully simuated in LP_txtbx_pwd.
-2019-09-15 14:24:43,448 - testlogs.log - INFO - Clicked on &apos;LP_btn_signin&apos; successfully.
-2019-09-15 14:24:53,629 - testlogs.log - INFO - Text of the webelement is &apos;MY ACCOUNT&apos;.
-</system-err></testcase><testcase classname="test_execute" file="test_execute.py" line="35" name="test_login_to_automation_practice[testdata1]" time="50.725"><system-err>2019-09-15 14:25:03,746 - testlogs.log - INFO - chrome Driver has been initiated successfully
-2019-09-15 14:25:05,382 - testlogs.log - INFO - Browser was maximized successfully.
-2019-09-15 14:25:05,446 - testlogs.log - INFO - Driver to perform implicitly_wait of &apos;10&apos; seconds.
-2019-09-15 14:25:05,454 - testlogs.log - INFO - {&apos;tc_id&apos;: &apos;TC02&apos;, &apos;tc_desc&apos;: &apos;Login&apos;, &apos;tc_user_name&apos;: &apos;hinak406@gmail.com&apos;, &apos;tc_pwd&apos;: &apos;Hin@1994&apos;}
-2019-09-15 14:25:19,884 - testlogs.log - INFO - Driver open the &apos;http://automationpractice.com/index.php&apos; successfully
-2019-09-15 14:25:19,984 - testlogs.log - INFO - Driver has set the page load timeout of &apos;60&apos; seconds.
-2019-09-15 14:25:25,475 - testlogs.log - INFO - Clicked on &apos;LP_link_signin&apos; successfully.
-2019-09-15 14:25:27,943 - testlogs.log - INFO - hinak406@gmail.com is successfully simuated in LP_txtbx_email_id.
-2019-09-15 14:25:30,279 - testlogs.log - INFO - Hin@1994 is successfully simuated in LP_txtbx_pwd.
-2019-09-15 14:25:34,951 - testlogs.log - INFO - Clicked on &apos;LP_btn_signin&apos; successfully.
-2019-09-15 14:25:45,145 - testlogs.log - INFO - Text of the webelement is &apos;MY ACCOUNT&apos;.
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="Sweet-Home-PC" name="pytest" skipped="0" tests="1" time="41.528" timestamp="2019-10-06T13:14:35.649096"><testcase classname="test_execute" file="test_execute.py" line="73" name="test_login_to_automation_practice[testdata0]" time="35.502"><system-err>2019-10-06 13:15:10,142 - testlogs.log - INFO - chrome Driver has been initiated successfully
+2019-10-06 13:15:12,799 - testlogs.log - INFO - Browser was maximized successfully.
+2019-10-06 13:15:12,814 - testlogs.log - INFO - Driver to perform implicitly_wait of &apos;10&apos; seconds.
+2019-10-06 13:15:12,830 - testlogs.log - INFO - {&apos;tc_id&apos;: &apos;TC01&apos;, &apos;tc_desc&apos;: &apos;Login&apos;, &apos;tc_user_name&apos;: &apos;hinak406@gmail.com&apos;, &apos;tc_pwd&apos;: &apos;Hin@1994&apos;, &apos;tc_category&apos;: &apos;women&apos;, &apos;tc_dresses&apos;: &apos;casual dresses&apos;, &apos;tc_size&apos;: 7, &apos;tc_quantity&apos;: 2, &apos;tc_prize&apos;: 26}
 </system-err></testcase></testsuite></testsuites>

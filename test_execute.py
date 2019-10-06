@@ -34,7 +34,10 @@ def get_test_data():
 		tc_quantity = xlsx.read_cell(workbook,sheet_name,row,col_tc_quantity)
 		tc_prize = xlsx.read_cell(workbook,sheet_name,row,col_tc_prize)
 
-		testdata_info.append({
+		if tc_id is None:      
+			continue
+		else:
+			testdata_info.append({
 			"tc_id" : tc_id,
 			"tc_desc" : tc_desc,
 			"tc_user_name" : tc_user_name,
@@ -46,17 +49,32 @@ def get_test_data():
 			"tc_prize" : tc_prize
 			#category
 			})
+
+		#another conditions to iterate the values	
+		#if tc_id is not None:
+			# testdata_info.append({
+			# "tc_id" : tc_id,
+			# "tc_desc" : tc_desc,
+			# "tc_user_name" : tc_user_name,
+			# "tc_pwd" : tc_pwd,
+			# "tc_category" : tc_category,
+			# "tc_dresses" : tc_dresses,
+			# "tc_size" : col_tc_size,
+			# "tc_quantity" : tc_quantity,
+			# "tc_prize" : tc_prize
+			# #category
+			# })
+
+
+
 	return testdata_info
 
-#print(get_test_data())
+print(get_test_data())
 
 @pytest.mark.parametrize("testdata",get_test_data())
 def test_login_to_automation_practice(driver,testdata):
 	LOGGER.info("%s"%(testdata))
 	assert login_page.login_your_logo(driver,testdata['tc_user_name'],testdata['tc_pwd']) is True
-	#write another function to select cateogory to accpt arguments
+	category_page.selecting_dresses(driver,testdata['tc_quantity'])
+	#assert True
 
-@pytest.mark.parametrize("testdata",get_test_data())
-def test_select_the_dresses_from_automation_practice(driver,testdata):
-	LOGGER.info("%s"%(testdata))
-	category_page.selecting_dresses(driver)

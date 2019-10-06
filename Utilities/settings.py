@@ -45,9 +45,9 @@ SEND_FROM = "automationreports@gmail.com"
 
 MAIL_TO = ['hinak406@gmail.com','vinodkumar.kouthal@gmail.com']
 
-SMTP_USERNAME = "mention_gmail_Id_here"
+SMTP_USERNAME = "hinak406@gmail.com"
 
-SMTP_PASSWORD = "Mention_gmail_password_here"
+SMTP_PASSWORD = "Hin@1994"
 
 ###################Logging Configuration#######################################
 

@@ -40,7 +40,7 @@ Application URL and respective username and password are provided here.
 Framework related details is used to setup tox installation
 
 ## Email Configuration
-For Authenticating with Gmail refer this Article [stackabuse](`https://stackabuse.com/how-to-send-emails-with-gmail-using-python/`)
+For Authenticating with Gmail refer this Article [stackabuse](https://stackabuse.com/how-to-send-emails-with-gmail-using-python/)
 
 1. Provide the list of recepients in **MAIL_TO**
 2. Provide your personal gmail id  in **SMTP_USERNAME**
