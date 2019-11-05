@@ -1,6 +1,6 @@
 import requests
 
-URL = 'mention_your_here'
+URL = 'mention_url_here'
 
 headers = {
 	"Postman-Token": "tokenid",
@@ -8,10 +8,15 @@ headers = {
 	# mention all the rest of the key value pair here
 }
 
+# add certificates
+crt_path = "file_path_of_pem_file"
+key_path = "file_path_of_key_file"
 
-api_req = requests.get(url=URL, headers=headers)
+certificate = (crt_path, key_path)
 
-print(api_req.json())
+api_req = requests.get(url=URL, headers=headers, cert=certificate, verify=True)
+
+# if error - also try for verify=False
 
 if api_req.status_code == 200:
 	output = api_req.json()
