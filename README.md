@@ -1,5 +1,9 @@
 ## Selenium with Python Automation Framework
 
+**Trainer:** Vinodkumar Kouthal
+
+**Student:** Hina Khan
+
 # Git clone
 
 Clone the project
